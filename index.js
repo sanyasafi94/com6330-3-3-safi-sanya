@@ -34,7 +34,16 @@ function runQuiz (questionArr) {
     for (let i =0; i < allQuestions; i++){
         var question = questionArr[i].question;
         var answer = questionArr[i].answer;
-        let pickedAnswer = confirm(question)
+        let pickedAnswer = confirm(question);
+
+        if (pickedAnswer === answer){
+            pickedAnswers++;
+        }
     }
 
+    var percentageRight = (pickedAnswers / allQuestions) * 100;
+    alert ("You got " + percentageRight + "right.");
+
 }
+
+runQuiz(questionArr);
