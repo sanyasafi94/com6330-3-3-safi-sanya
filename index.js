@@ -1,5 +1,5 @@
 
-const questionArr = [
+const questionsArr = [
     {
         question: 'Cats are felines.',
         answer: true
@@ -21,3 +21,17 @@ const questionArr = [
         answer: true
     }
 ]
+
+function runQuiz (questionsArr) {
+    let correctAnswers = 0; 
+
+    for (let i = 0; i < questionsArr.length; i++){
+        const askedQuestion = questionsArr[i];
+        const pickedAnswer = confirm(askedQuestion.question);
+        
+        if (pickedAnswer === askedQuestion.answer){
+            correctAnswers++;
+        }
+    }
+
+}
