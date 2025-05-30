@@ -22,8 +22,19 @@ function runQuiz() {
     },
   ];
 
-  for (let i = 0; i < questionsArr.length; i++) {
+  let score = 0;
+  var totalQuestions = questionsArr.length;
+
+  for (let i = 0; i < totalQuestions; i++) {
     var currentQuestion = questionsArr[i].question;
     var currentAnswer = questionsArr[i].answer;
+
+    let userAnswer = confirm(
+      currentQuestion + "Click OK for True and Cancel for False"
+    );
+
+    if (userAnswer === currentAnswer) {
+      score++;
+    }
   }
 }
