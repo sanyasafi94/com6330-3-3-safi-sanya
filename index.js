@@ -1,28 +1,23 @@
+function runQuiz() {
+  var questionArr = [
+    {
+      question: "Cats are the cutest pets",
+      answer: true,
 
+      question: "Cats make barking sounds",
+      answer: false,
 
-function runQuiz (){
-   
-var questionsArr = [
-    {
-        question: 'Cats are felines.',
-        answer: true
-    }
-    {
-        question: 'Cats like to play fetch.',
-        answer: false
-    }
-    {
-        question: 'Cats have whiskers.',
-        answer: true
-    } 
-    {
-        question: 'Cats make barking noises.',
-        answer: false
-    }
-    {
-        question: 'Cats are the cutest animals.',
-        answer: true
-    }
-]
+      question: "Cats play fetch",
+      answer: false,
+
+      question: "Cats have four legs and a tail",
+      answer: true,
+
+      question: "Cats can be indoor and outdoor pets",
+      answer: true,
+    },
+  ];
+  for (var i = 0; i < questionArr.length; i++) {
+    console.log(i);
+  }
 }
-   
