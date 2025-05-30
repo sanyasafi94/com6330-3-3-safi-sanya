@@ -30,11 +30,17 @@ function runQuiz() {
     var currentAnswer = questionsArr[i].answer;
 
     let userAnswer = confirm(
-      currentQuestion + "Click OK for True and Cancel for False"
+      currentQuestion + "\n\nClick OK for True and Cancel for False"
     );
 
     if (userAnswer === currentAnswer) {
       score++;
     }
+
+    let percentageCorrect;
+    if (totalQuestions > 0) {
+      percentageCorrect = (score / totalQuestions) * 100;
+    }
+    let roundedPercentage = Math.ceil(percentageCorrect);
   }
 }
