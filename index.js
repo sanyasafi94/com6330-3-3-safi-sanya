@@ -32,6 +32,18 @@ function runQuiz (questionsArr) {
         if (pickedAnswer === askedQuestion.answer){
             correctAnswers++;
         }
-    }
 
+        var totalQuestions = questionsArr.length;
+        let percentageCorrect = 0;
+
+        if (totalQuestions > 0){
+            percentageCorrect = (correctAnswers / totalQuestions) * 100; 
+            alert ("You got " + percentageCorrect + "correct.")
+        }
+
+
+    }
 }
+
+runQuiz(questionsArr);
+
