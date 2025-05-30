@@ -1,5 +1,8 @@
 
-const questionsArr = [
+
+function runQuiz (){
+   
+var questionsArr = [
     {
         question: 'Cats are felines.',
         answer: true
@@ -21,29 +24,5 @@ const questionsArr = [
         answer: true
     }
 ]
-
-function runQuiz (questionsArr) {
-    let correctAnswers = 0; 
-
-    for (let i = 0; i < questionsArr.length; i++){
-        const askedQuestion = questionsArr[i];
-        const pickedAnswer = confirm(askedQuestion.question);
-        
-        if (pickedAnswer === askedQuestion.answer){
-            correctAnswers++;
-        }
-
-        var totalQuestions = questionsArr.length;
-        let percentageCorrect = 0;
-
-        if (totalQuestions > 0){
-            percentageCorrect = (correctAnswers / totalQuestions) * 100; 
-            alert ("You got " + percentageCorrect + "correct.")
-        }
-
-
-    }
 }
-
-runQuiz(questionsArr);
-
+   
